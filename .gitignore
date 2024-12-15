@@ -1,0 +1,10 @@
+﻿################################################################################
+# Bu .gitignore dosyası Microsoft(R) Visual Studio tarafından otomatik olarak oluşturulmuştur.
+################################################################################
+
+/.vs
+/MyDictionary.API/bin/Debug/net8.0
+/MyDictionary.API/obj
+/MyDictionary.Redis/bin/Debug/net8.0
+/MyDictionary.Redis/obj
+/WebApplication1
