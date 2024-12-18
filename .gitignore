@@ -8,3 +8,16 @@
 /MyDictionary.Redis/bin/Debug/net8.0
 /MyDictionary.Redis/obj
 /WebApplication1
+/MyDictionary.API/bin/Debug/net9.0
+/MyDictionary.Customer/bin/Debug/net9.0
+/MyDictionary.Customer/obj/Debug/net9.0
+/MyDictionary.Customer/obj
+/MyDictionary.Customer.Model/bin/Debug/net9.0
+/MyDictionary.Customer.Model/obj
+/MyDictionary.Data.Customer/bin/Debug/net9.0
+/MyDictionary.Data.Customer/obj
+/MyDictionary.Enums/bin/Debug/net9.0
+/MyDictionary.Enums/obj
+/MyDictionary.Model.Common/bin/Debug/net9.0
+/MyDictionary.Model.Common/obj
+/MyDictionary.Redis/bin/Debug/net9.0

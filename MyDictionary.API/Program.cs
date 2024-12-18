@@ -1,5 +1,6 @@
-using MyDictionary.Redis.Interfaces;
-using MyDictionary.Redis.Services;
+using MyDictionary.Business.Customer;
+using MyDictionary.Data.Customer.Interfaces;
+using MyDictionary.Data.Customer.Services;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,7 @@ if (!string.IsNullOrEmpty(redisConnStr))
     var options = new ConfigurationOptions
     {
         EndPoints = { redisConnStr},
-        //AbortOnConnectFail = false,
+        AbortOnConnectFail = false,
         AsyncTimeout = 1000,
         SyncTimeout = 1000,
         AllowAdmin = true,
@@ -27,7 +28,9 @@ if (!string.IsNullOrEmpty(redisConnStr))
     builder.Services.AddSingleton<IConnectionMultiplexer>(redisConn);
 }
 
-builder.Services.AddSingleton<IRedisService, RedisService>();
+builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+CustomerServices.AddCustomerServices(builder.Services);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
