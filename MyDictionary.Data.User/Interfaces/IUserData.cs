@@ -1,10 +1,13 @@
-﻿using MyDictionary.Model.User.Request;
+﻿using MyDictionary.Model.Users.Request;
 
-namespace MyDictionary.Data.User.Interfaces
+namespace MyDictionary.Data.Users.Interfaces
 {
     public interface IUserData
     {
-        public Task<UserRequest> GetUser(int ID, CancellationToken token);
-        public Task<UserRequest> SaveUser(UserRequest request, CancellationToken token);
+        public Task<User> GetAsync(string? ID, string? UserID, CancellationToken token);
+        public Task CreateAsync(User request, CancellationToken token);
+        public Task UpdateAsync(User request, CancellationToken token);
+        public Task DeleteAsync(string ID, CancellationToken token);
+        public Task<List<User>> GetAllAsync();
     }
 }

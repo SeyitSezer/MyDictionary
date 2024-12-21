@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyDictionary.User.Model\MyDictionary.Model.User.csproj" />
-    <ProjectReference Include="..\MyDictionary.User\MyDictionary.Business.User.csproj" />
-    <ProjectReference Include="..\MyDictionary.Data.User\MyDictionary.Data.User.csproj" />
+    <ProjectReference Include="..\MyDictionary.User.Model\MyDictionary.Model.Users.csproj" />
+    <ProjectReference Include="..\MyDictionary.User\MyDictionary.Business.Users.csproj" />
+    <ProjectReference Include="..\MyDictionary.Data.User\MyDictionary.Data.Users.csproj" />
   </ItemGroup>
 
 </Project>

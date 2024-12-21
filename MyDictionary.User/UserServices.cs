@@ -1,20 +1,22 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using MyDictionary.Business.User.Queries;
-using MyDictionary.Data.User.Interfaces;
-using MyDictionary.Data.User.Services;
+using MyDictionary.Business.Users.Queries;
+using MyDictionary.Data.Users.Interfaces;
+using MyDictionary.Data.Users.Services;
 using MyDictionary.Model.Common;
-using MyDictionary.Model.User.Request;
+using MyDictionary.Model.Users.Request;
 
-namespace MyDictionary.Business.User
+namespace MyDictionary.Business.Users
 {
-    public class UserServices
+    public class UserServices(IUserData userdata)
     {
+        private readonly IUserData userdata = userdata;
+
         public static IServiceCollection AddUserServices(IServiceCollection services)
         {
 
             services.AddSingleton<IUserData, UserData>();
-            return services.AddSingleton<IRequestHandler<UserRequest, CommonResponse<UserRequest>>, SaveUser>();
+            return services.AddSingleton<IRequestHandler<User, CommonResponse<User>>, SaveUserData>();
         }
     }
 }

@@ -19,13 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cache", "Cache", "{B1ACE870
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "User", "User", "{1DBF73B0-DE22-4590-B25A-21FB26827F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Business.User", "MyDictionary.User\MyDictionary.Business.User.csproj", "{54307CB5-78E0-4DA7-9DF3-96C6A4D75690}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Business.Users", "MyDictionary.User\MyDictionary.Business.Users.csproj", "{54307CB5-78E0-4DA7-9DF3-96C6A4D75690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Model.User", "MyDictionary.User.Model\MyDictionary.Model.User.csproj", "{C33ED8E6-DB2E-4548-A7DC-2871C33131A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Model.Users", "MyDictionary.User.Model\MyDictionary.Model.Users.csproj", "{C33ED8E6-DB2E-4548-A7DC-2871C33131A7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Enums", "MyDictionary.Enums\MyDictionary.Enums.csproj", "{12399078-D4D0-4AAE-8560-84E0DCDAC822}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Data.User", "MyDictionary.Data.User\MyDictionary.Data.User.csproj", "{40B2EB3B-F39E-4A1A-932B-29866AB8484F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Data.Users", "MyDictionary.Data.User\MyDictionary.Data.Users.csproj", "{40B2EB3B-F39E-4A1A-932B-29866AB8484F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDictionary.Model.Common", "MyDictionary.Model.Common\MyDictionary.Model.Common.csproj", "{238624AE-EBB2-49FE-A92D-A8F3ED484F63}"
 EndProject

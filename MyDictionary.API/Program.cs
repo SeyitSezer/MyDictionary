@@ -1,6 +1,7 @@
-using MyDictionary.Business.User;
-using MyDictionary.Data.User.Interfaces;
-using MyDictionary.Data.User.Services;
+using MyDictionary.Business.Users;
+using MyDictionary.Data.Users.Interfaces;
+using MyDictionary.Data.Users.Services;
+using MyDictionary.Model.Common.UserDatabase;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +30,7 @@ if (!string.IsNullOrEmpty(redisConnStr))
 }
 
 builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
+builder.Services.Configure<UserDatabaseSettings>(builder.Configuration.GetSection("Mongo"));
 UserServices.AddUserServices(builder.Services);
 
 var app = builder.Build();

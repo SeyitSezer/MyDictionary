@@ -1,10 +1,14 @@
 ﻿using MediatR;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 using MyDictionary.Model.Common;
 
-namespace MyDictionary.Model.User.Request
+namespace MyDictionary.Model.Users.Request
 {
-    public class UserRequest : IRequest<CommonResponse<UserRequest>>
+    public class User : IRequest<CommonResponse<User>>
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string? ID { get; set; }
         public string? Nationality { get; set; }
         public required string UserID { get; set; }
@@ -14,9 +18,9 @@ namespace MyDictionary.Model.User.Request
         public int? Level { get; set; }
         public double? Balance { get; set; }
         public bool? IsActive { get; set; }
-        public DateTime? RegisterDate { get; set; }
-        public DateTime LastLoginDate { get; set; }
         public string? GSMNumber { get; set; }
         public string? EmailAddress { get; set; }
+        public DateTime? RegisterDate { get; set; } = DateTime.Now;
+        public DateTime LastLoginDate { get; set; } = DateTime.Now;
     }
 }
