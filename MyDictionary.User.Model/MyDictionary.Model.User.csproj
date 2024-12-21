@@ -11,8 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyDictionary.Customer.Model\MyDictionary.Model.Customer.csproj" />
-    <ProjectReference Include="..\MyDictionary.Data.Customer\MyDictionary.Data.Customer.csproj" />
+    <ProjectReference Include="..\MyDictionary.Enums\MyDictionary.Enums.csproj" />
+    <ProjectReference Include="..\MyDictionary.Model.Common\MyDictionary.Model.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Response\" />
   </ItemGroup>
 
 </Project>

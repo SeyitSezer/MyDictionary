@@ -1,6 +1,6 @@
-using MyDictionary.Business.Customer;
-using MyDictionary.Data.Customer.Interfaces;
-using MyDictionary.Data.Customer.Services;
+using MyDictionary.Business.User;
+using MyDictionary.Data.User.Interfaces;
+using MyDictionary.Data.User.Services;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,7 +29,7 @@ if (!string.IsNullOrEmpty(redisConnStr))
 }
 
 builder.Services.AddMediatR(config => config.RegisterServicesFromAssemblies(AppDomain.CurrentDomain.GetAssemblies()));
-CustomerServices.AddCustomerServices(builder.Services);
+UserServices.AddUserServices(builder.Services);
 
 var app = builder.Build();
 
